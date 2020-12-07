@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/login",
             "index": "src/index.html",
@@ -64,8 +64,9 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
+            "extraWebpackConfig": "webpack.config.js",
             "browserTarget": "login:build"
           },
           "configurations": {
@@ -81,7 +82,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "login"
+    }
+  },
+  "defaultProject": "login",
+  "cli": {
+    "analytics": "b73e6ec4-e522-405e-aa03-46eaf29f23d8"
+  }
 }
