@@ -9,16 +9,14 @@ import { Component, OnInit } from '@angular/core';
 
 export class LoginComponent implements OnInit {
   constructor() { }
-  username = 'hola'
-  showModal = false;
-  password = '123456';
+  username: string = 'hola';
+  showModal: boolean = false;
+  password: string = '123456';
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  setShowModal(e){
-    e.preventDefault();
-    this.showModal = !this.showModal;
+  setShowModal(modal) {
+    this.showModal = modal;
   }
 }
 
